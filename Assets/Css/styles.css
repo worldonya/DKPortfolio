@@ -1,0 +1,318 @@
+/* Styles */
+/* Importera lokala Roboto-fonter */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+         url('../Fonts/roboto/Roboto-Regular.woff') format('woff'),
+         url('../Fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../Fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+         url('../Fonts/roboto/Roboto-Bold.woff') format('woff'),
+         url('../Fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*Text Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Använd Roboto */
+    background-color: #ffffff;
+    color: #789dbc; /* Standard textfärg som jag valde */
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 1rem;
+}
+
+/* Logo Styles */
+header .logo {
+    padding-top: 40px;
+    font-size: 5.8rem;
+    font-weight: bold;
+    color: #000; /* Sätt DK till svart */
+    text-align: right; /* Högerjustera texten */
+    display: flex; /* Flex-behållare */
+    justify-content: flex-end; /* Justera logotypen till höger */
+    align-items: center; /* Vertikal centrering */
+    gap: 0; /* Ta bort mellanrum mellan elementen */
+}
+
+header .logo a {
+    text-decoration: none; /* Ta bort understrykning */
+    color: inherit; /* Behåll färgen från logotypen */
+    font-size: inherit; 
+    font-weight: inherit; 
+    display: inline-block; /* Förhindra oönskade avstånd */
+}
+
+header .logo::after {
+    content: '.'; /* Lägg till punkten efter DK */
+    color: #789dbc; /* Punkten får samma färg som textfärgen */
+    font-size: 5.8rem; /* Samma storlek som logotypen */
+    margin-right: 0; /* Ta bort mellanrum till höger om punkten */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right; /* Högerjustera texten */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000; /* Menytextfärg */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    text-align: right; /* Högerjustera texten */
+}
+
+header nav ul li a:hover {
+    color: #6c8da9; /* Hover-effekt */
+}
+
+.social-icons {
+    position: absolute; /* Placera behållaren i det övre högra hörnet */
+    top: 40px;
+    right: 40px;
+    display: flex; /* Gör ikonerna horisontella */
+    gap: 1rem; /* Lägg till avstånd mellan ikonerna */
+}
+
+.social-icons a {
+    color: #000; /* Standardfärg för ikoner */
+    font-size: 1.5rem; /* Storlek på ikoner */
+    text-decoration: none; /* Ta bort linje under texten */
+    transition: color 0.3s; /* Lägg till en hover-effekt */
+}
+
+.social-icons a:hover {
+    color: #6c8da9; /* Ändra färg vid hover */
+}
+
+
+main {
+    /* margin-left: 200px; Utrymme för menyn */
+    display: flex;
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt om höjden tillåter */
+    min-height: calc(100vh - 80px); /* Anpassa till viewporthöjden minus menyns toppmarginal */
+    padding: 1rem; /* Lägg till lite utrymme runt innehållet */
+} 
+
+/* Hero Section */
+.hero {
+    display: flex; /* Flexbox för att placera bild och text sida vid sida */
+    flex-direction: row; /* Placera innehållet (x) horisontellt */
+    align-items: center; /* Centrera innehållet (y) vertikalt */
+    justify-content: center; /* Centrera hela sektionen (x) */
+    text-align: left; /* Align text vänster */
+    padding: 2rem 1rem;
+    background-color: #ffffff; 
+}
+
+/* Profilbild */
+.img-fluid {
+    width: 450px; /* Ange storlek för bilden */
+    height: auto;
+    object-fit: cover; /* Proportionerlig fyllning */
+    display: block;
+    object-fit: cover; /* Fyller bilden proportionellt */
+    background-color: #fff;
+}
+
+/* Hero Text */
+.hero .smalltitle {
+    font-size: 1.5em;
+    color: #000;
+    margin: 0.1em;
+    margin-left: -1.9em;
+}
+
+
+.hero .bigtitle {
+    color: #789dbc;
+    font-size: 3em;
+    margin-left: -1em;
+}
+
+.hero .andtitle {
+ font-size: 7em;
+ margin-left: -0.4em;
+}
+
+.hero h2 {
+    font-size: 7em;
+    color: #000;
+    font-weight: bold;
+    margin: -0.1em;
+    margin-left: -0.6em;
+}
+
+/* Hero-sektionen: Text under bilden och centrerat på små skärmar */
+@media (max-width: 768px) {
+    .hero {
+        display: flex; /* Aktivera Flexbox */
+        flex-direction: column; /* Placera innehållet (y)) */
+        align-items: center; /* Centrera (x)) */
+        justify-content: center; /* Centrera (y)) */
+        text-align: center; /* Align texten till mitten */
+        padding: 1rem; /* Lägger till lite inre marginal */
+    }
+
+    .profile-pic {
+        margin-bottom: 1rem; /* Avstånd mellan bilden och texten */
+        max-width: 80%; /* Anpassa bildens bredd */
+        height: auto; /* Behåll proportionerna */
+    }
+
+    .hero-text {
+        text-align: center; /* Centrera texten */
+    }
+}
+
+/* Footer Styles */
+footer {
+    position:relative;
+    text-align: center;
+    padding: 16px;
+    color: #000; /* Samma färg som global textfärg */
+    font-size: 1.2em;
+    background-color: #fff;
+}
+
+/* Sektionens grundläggande layout */
+.circle-text-section {
+   margin-bottom: 20px;
+}
+
+/* Själva rosa cirkeln */
+.circle {
+    position: relative; /* Gör att cirkeln kan placeras oberoende av sitt innehåll */
+    top: 0%; /* Center vertically within the parent */
+    left: 0%; /* Center horizontally */
+    margin-top: 50px;
+    transform: translateY(0%); /* Justera för att få exakt centrerad placering */
+    width: 150px; /* Mindre cirkelstorlek */
+    height: 150px;
+    background-color: #ffe4e3;
+    border-radius: 50%; /* Gör formen rund */
+    display: flex;
+}
+
+/* Texten inuti cirkeln */
+.circle p {
+    font-size: 3.5em; 
+    font-weight: bold; 
+    color: #000; 
+    margin-top: 0.7em;
+    margin-left: 1.3em;
+    white-space: nowrap; /* Förhindra radbrytning som gjorde mig galen */
+}
+
+
+
+/* För mindre skärmar */
+@media (max-width: 992px) {
+    .circle {
+        position: static; /* Ta bort absolut positionering */
+        margin-left: 0; /* Flytta cirkeln till vänster */
+        margin-top: 20px; /* Lägg till lite avstånd uppifrån */
+        width: 120px; /* Justera storleken */
+        height: 120px;
+    }
+}
+
+
+.card {
+  max-width: 400px; /* Justerar kortets bredd */
+  margin: 0 auto; /* Centrerar kortet */
+}
+
+/* about me card som jag vill inte ändra storleken */
+.custom-card {
+    max-width: none; /* Tar bort begränsningen */
+    margin: 0; /* Tar bort centrerande marginal */
+  }
+
+/* tabort linje under texter i card */
+.no-underline {
+    text-decoration: none;
+}
+
+/* Sektion för Contact */
+.contact-circle-section {
+    position: absolute; /* Placera sektionen exakt */
+    top: 80px;
+    left: 280px; 
+    display: flex; /* Flexbox för centrering */
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt */
+    margin-bottom: 1rem; /* Minska marginalen mellan cirkeln och formuläret */
+}
+
+/* För att centrera formuläret efter menyn */
+.container-fluid.contact {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-top: 150px; 
+    /* min-height: calc(100vh - 200px);  */
+} 
+
+/* Formulär */
+form {
+    max-width: 600px; /* Begränsa bredden på formuläret */
+    width: 100%; /* Anpassa till mindre skärmar */
+    padding: 20px; /* Lägg till padding */
+    background: #ffffff; /* Vit bakgrund */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtil skugga */
+    border-radius: 8px; /* Rundade hörn */
+    text-align: left; /* Justera text till vänster */
+}
+
+form .form-label {
+    font-size: 1rem; /* Normalstorlek för etiketttext */
+    font-weight: bold; /* Fetstil för etiketter */
+}
+
+form .form-control {
+    font-size: 1rem; /* Gör input-texten större */
+    padding: 10px; /* Lägg till lite padding för bättre utrymme */
+    border-radius: 6px; /* Rundade hörn för input-fält */
+}
+
+form .btn {
+    width: 25%; /* Gör knappen bredare */
+    margin: 0 auto; /* Centrera knappen horisontellt */
+    display: block; /* Se till att knappen följer block-stil */
+    background-color: #789dbc; /* Anpassad knappfärg */
+    color: #ffffff; /* Vit textfärg */
+    padding: 10px;
+    font-size: 1.1rem; /* Justera textstorlek */
+    border-radius: 6px; /* Rundade hörn */
+    border: none; /* Ingen kantlinje */
+    cursor: pointer; /* Pekar-hand vid hover */
+}
+form .btn:hover {
+    background-color: #789dbc; /* Mörkare blå vid hover */
+}

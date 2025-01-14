@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Donya Khavarinejad</title>
+  <!-- kopplar till css -->
+  <link rel="stylesheet" href="Assets/Css/styles.css">
+  <!-- Lägg till Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+
+  <!-- Social Icons för stor skärm som placeras högst upp höger på sida och ska inte syns i mindre skärm -->
+  <div class="social-icons d-none d-lg-flex justify-content-end">
+    <a href="tel:+46736227007" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:donyakhavari72@gmail.com" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+
+  <div>
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary d-lg-none">
+          <div class="container-fluid">
+            <!-- Logotyp -->
+            <a class="navbar-brand" href="index.html">
+              <img src="Assets/Images/logo.png" alt="Bootstrap Logo" width="50" height="ms-auto">
+            </a>
+
+            <!-- Navbar i knapp form placerad till höger för mindre skärm-->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigeringsmeny för mindre skärm -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <!-- Sociala ikoner som ska syns i navbar för mindre skärm -->
+                <li class="nav-item d-flex justify-content-around">
+                  <a href="tel:+46736227007" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <i class="fas fa-phone"></i>
+                  </a>
+                  <a href="mailto:donyakhavari72@gmail.com" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <!-- Meny knappar -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="work.html">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Har använd row och col för att ha kontroll över min layout -->
+    <div class="row">
+      <!-- Sidokolumn för meny i större skärm -->
+      <div class="col-lg-2">
+        <div class="p-3">
+          <!-- class:
+         - d-none: döljer meny på alla skärmar som standard.
+         - d-lg-block visar meny endast på stora skärmar som ett blockelement -->
+          <header class="d-none d-lg-block">
+            <div class="logo">
+              <a href="index.html">Dk</a> <!-- Gör logo klickbar -->
+            </div>
+            <!-- Meny knappar -->
+            <nav>
+              <ul>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <!-- Huvudinnehåll -->
+      <!-- class: col-lg-10: col tar upp 10 av 12 alla col i ett Bootstrap-rutnät på stora skärmar. -->
+      <div class="col-lg-10">
+        <!-- Row för placera circle och texten -->
+        <!-- mb-3: margin bottom. -->
+        <div class="row mb-3">
+          <div class="col">
+            <!-- p-3: padding -->
+            <div class="p-3">
+  
+              <div class="circle-text-section d-flex justify-content-start align-items-center">
+                <div class="circle">
+                  <p class="h3 text-start">Business Card</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <!-- Kolumn som är centrerad med flexbox:
+         - col-10: Upptar 10 av 12 col.
+         - mx-auto: Centrerar col horisontellt(x).
+         - d-flex: Aktiverar flexbox-layout.
+         - flex-column: Lägger flexboxens barn i en col.
+         - justify-content-center: Centrerar innehållet (y).
+         - align-items-center: Centrerar innehållet (x).
+         - text-center: Centrerar texten i mitten -->
+        <div class="col-10 mx-auto d-flex flex-column justify-content-center align-items-center text-center">
+          <!-- text-start: Aligt text vänster -->
+            <p class="text-start">I design business cards that are clear and eye-catching. With smart layouts, colors, and fonts, I create designs that make an impact and reflect the brand's identity.
+            </p>
+        </div>
+
+        <!-- Kortsektion -->
+        <!-- Rad med två kolumner:
+         - row: Definierar en rad-row.
+         - row-cols-2: Delar upp raden i två col på alla skärmstorlekar som standard.
+         - row-cols-md-2: Behåller två kolumner även på medium skärmar.
+         - g-4: Lägger till ett avstånd (gap) mellan col och row.
+         - mx-2: Margin (x) på (8px)-->
+        <div class="row row-cols-2 row-cols-md-2 g-4 mx-2">
+          <div class="col">
+            <!-- h-100: Gör att kortet fyller hela höjden av sin behållare (100% av behållarens höjd) -->
+            <div class="card h-100">
+              <img src="Assets/Images/cart1.png" class="card-img-top" alt="Card1">
+              <div class="card-body text-start">
+                <p class="card-text">This business card features a bold and modern design with abstract shapes and a harmonious color palette of blue, beige, and pink. The flowing shapes are inspired by the Persian script of my name, creating a visually dynamic and deeply personal connection to my cultural identity.
+                    The name and title are placed centrally in a thick, modern font to balance the organic shapes and ensure clarity. The design merges creativity, individuality, and professionalism, perfectly reflecting the essence of a digital designer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- h-100: Gör att kortet fyller hela höjden av sin behållare (100% av behållarens höjd) -->
+            <div class="card h-100">
+              <img src="Assets/Images/cart2.png" class="card-img-top" alt="Card2">
+              <div class="card-body text-start">
+                <p class="card-text">This business card features a minimalist and elegant design with a personal touch. The right side showcases a self-portrait sketch created by me, adding an artistic and unique element that reflects my creativity and individuality.
+                    The name is highlighted in a modern script font for a stylish and approachable feel, while the contact details are presented in a clean, sans-serif font to ensure readability. The monochrome color scheme emphasizes professionalism and timelessness, making the design both personal and impactful.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <!-- h-100: Gör att kortet fyller hela höjden av sin behållare (100% av behållarens höjd) -->
+            <div class="card h-100">
+              <img src="Assets/Images/card3.png" class="card-img-top" alt="Card3">
+              <div class="card-body text-start">
+                <p class="card-text">This business card embraces a bold, minimalist aesthetic with a strong focus on typography. The name is displayed in large, block-style letters that dominate the design, creating a striking and confident impression. The vertical placement of the job title adds a unique and dynamic touch, breaking away from traditional layouts while maintaining clarity and readability.
+                    The black-and-white color scheme reinforces a timeless and professional look, ensuring the design is both impactful and versatile. This card reflects a bold and straightforward approach, perfectly suited for a digital designer who values clarity and creativity.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <!-- h-100: Gör att kortet fyller hela höjden av sin behållare (100% av behållarens höjd) -->
+              <img src="Assets/Images/card4.png" class="card-img-top" alt="Card4">
+              <div class="card-body text-start">
+                <p class="card-text">This business card features a vibrant and modern design using a combination of pastel blocks in blue, pink, yellow, green, and white to create a visually engaging composition. The colors are strategically placed to add a sense of balance and playfulness while maintaining professionalism.
+                    The name and title are positioned prominently in clean, classic typography to ensure readability. The contact information is organized neatly at the bottom for easy accessibility. The bold yellow block in the center highlights the job title and phone number, drawing attention to key details. This design reflects creativity, approachability, and clarity, aligning with a digital designer's innovative and professional persona.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p class="fs-6">Designed & built with love, by Donya Khavarinejad &copy; 2024</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
